@@ -1,3 +1,6 @@
 {
-  "jwtPrivateKey": " "
+  "jwtPrivateKey": "unsecureKey",
+  "db": "mongodb://localhost/cinema",
+  "port": "3900",
+  "requireAuth": true
 }
