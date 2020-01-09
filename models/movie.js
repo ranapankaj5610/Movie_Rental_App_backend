@@ -10,6 +10,16 @@ const Movie = mongoose.model('Movies', new mongoose.Schema({
     minlength: 5,
     maxlength: 255
   },
+  imageUrl:{
+    type: String,
+    required: false
+
+  },
+  description:{
+  	type: String,
+  	required: true
+  },
+  
   genre: { 
     type: genreSchema,  
     required: true

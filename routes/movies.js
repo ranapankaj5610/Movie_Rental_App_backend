@@ -5,8 +5,12 @@ const express = require('express');
 const router = express.Router();
 const auth=require("../middleware/auth");
 const admin=require("../middleware/admin");
+
+
 router.get('/', async (req, res) => {
+
   const movies = await Movie.find().sort('name');
+  
   res.send(movies);
 });
 
