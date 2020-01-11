@@ -40,7 +40,8 @@ const data = [
 ];
 
 async function seed() {
-  await mongoose.connect(config.get("db"));
+  console.log(config.get("db"),);
+  await mongoose.connect(config.get("db"),{useNewUrlParser:true,  useCreateIndex: true,useUnifiedTopology: true});
   await User.deleteMany({});
   await Movie.deleteMany({});
   await Genre.deleteMany({});
